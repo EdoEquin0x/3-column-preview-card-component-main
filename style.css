@@ -1,6 +1,8 @@
 
 
-
+/* Attempting to fix a small bug where html elements are
+visible 2 or 3 milliseconds at the page loading, which is very
+ugly */
 
 body.fade_in { display: none; } 
 
@@ -9,6 +11,7 @@ body.fade_in { display: none; }
 /* Attempting a reset */
 
 body {
+   
     padding: 0;
     margin: 0;
     font-family: 'Lexend Deca', sans-serif;
@@ -16,33 +19,37 @@ body {
 }
 
 
+
 /* The layout of the box containing the three offers */
 /* With Responsive design */
 
 @media only screen and (max-width: 768px) {
     .mainbox {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 0px 50px;
-    grid-template-areas:
-    "sedanbox"
-    "suvsbox"
-    "luxurybox";
-    }
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 0px 50px;
+        grid-template-areas:
+        "sedanbox"
+        "suvsbox"
+        "luxurybox";
+        
+        }
 }
 
 @media only screen and (min-width: 769px) {
     .mainbox {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 0.5fr 2fr 0.5fr;
-    
-    grid-template-areas:
-    ". . . . ."
-    ". sedanbox suvsbox luxurybox ."
-    ". . . . .";
-    }
+        display: grid;
+        
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr 2fr 0.5fr;
+       
+        grid-template-areas:
+        ". . . . ."
+        ". sedanbox suvsbox luxurybox ."
+        ". . . . .";
+        
+        }
 }
 
 /* The layout that will apply to each of three offer so they 
@@ -53,6 +60,7 @@ an have the exact same appearance */
         display: grid;
         grid-template-columns: 0fr 1fr 2fr 0.5fr;
         grid-gap: 2px;
+        
         grid-template-rows: 0.15fr 0.15fr 0.5fr 0.8r 1fr;
         grid-template-areas: 
         ". logo logo ."
@@ -67,6 +75,7 @@ an have the exact same appearance */
         display: grid;
         grid-template-columns: 0.5fr 1fr 2fr 0.5fr;
         grid-gap: 2px;
+        
         grid-template-rows: 0.15fr 0.15fr 0.5fr 0.8r 1fr;
         grid-template-areas: 
         ". logo logo ."
@@ -74,6 +83,7 @@ an have the exact same appearance */
         ". text text ."
         ". . . ."
         ". button button button";
+        
     }
 }
 
@@ -86,17 +96,20 @@ an have the exact same appearance */
     grid-area: sedanbox;
     background-color: hsl(31, 77%, 52%);
     
+    
 }
 
 .suvsbox {
     grid-area: suvsbox;
     background-color: hsl(184, 100%, 22%);
+    
 
 }
 
 .luxurybox {
     grid-area: luxurybox;
     background-color: hsl(179, 100%, 13%);
+    
 }
 
 
@@ -112,8 +125,9 @@ on every offer the exact same way */
     padding: 50px;
     margin-bottom: -20px;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 5em;
+    font-size: 2em;
     font-weight: bold;
+    
 }
 
 .TextDesc {
@@ -123,11 +137,12 @@ on every offer the exact same way */
     grid-area: text;
     position: relative;
     padding: 50px;
-    font-size: 3em;
+    font-size: 1em;
     max-width: 80%;
     max-height: 80%;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     font-weight: bolder;
+    
 }
 
 .Button {
@@ -139,8 +154,9 @@ on every offer the exact same way */
     background-color: hsla(0, 0%, 100%, 0.75);
     border: none;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 3.5em;
+    font-size: 1.5em;
     font-weight: bold;
+    
 }
 
 
